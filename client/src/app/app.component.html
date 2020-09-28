@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarexample" aris-controls="navbarexample">
+    <span class="navbar-toggle-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarexample">
+    <ul class="navbar-bar">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+
+      <li class="nav-item" *ngIf="!auth.isLoggedIn()">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+
+      <li class="nav-item" *ngIf="!auth.isLoggedIn()">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+
+      <li class="nav-item" *ngIf="auth.isLoggedIn()">
+        <a class="nav-link" routerLink="/profile">{{auth.getUserDetails()?.firstname}}</a>
+      </li>
+
+      <li class="nav-item" *ngIf="auth.isLoggedIn()">
+        <a (click)="auth.logOut()" class="nav-link" routerLink="">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

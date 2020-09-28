@@ -1,0 +1,2 @@
+This project is not created by me. Im just trying it out to learn about sequelize with mySQL and jsonwebtoken.
+Link for this project : https://www.youtube.com/watch?v=5fNlrEDolko&list=LL4m3bMZzk3LOSLyuJ14gm5w&index=6&t=0s&ab_channel=MoreCodes.
